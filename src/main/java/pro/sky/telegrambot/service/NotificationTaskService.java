@@ -44,7 +44,7 @@ public class NotificationTaskService {
         repository.deleteById(id);
     }
 
-    @Scheduled(cron = "0 0/1 * * * *") // каждая минута
+    @Scheduled(cron = "0 0/1 * * * *") // работает каждую минуту
     public void checkAndSendNotifications() {
         LocalDateTime now = LocalDateTime.now().truncatedTo(ChronoUnit.MINUTES);
 
